@@ -36,15 +36,17 @@ unofficial:
 
 
 ## Example
-Markdown text like
-```
+```python
+md_str = r"""
 # Hi
 i can ~~strikethrough~~
 i can *katex* $\pi$
 $$
 \frac{1}{0}
 $$
-i can ==mark==
+i can ==mark=="""
+md = ObsidianMarkdown()
+print(md.convert(md_str))
 ```
 Will render like:
 
