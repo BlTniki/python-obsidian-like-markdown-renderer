@@ -1,0 +1,9 @@
+[submodule "markdown_mark"]
+	path = extra_modules/markdown_mark
+	url = https://github.com/alberic89/markdown_mark.git
+[submodule "markdown_obsidian_katex"]
+	path = extra_modules/markdown_obsidian_katex
+	url = https://github.com/BlTniki/markdown_obsidian_katex.git
+[submodule "markdown_strikethrough"]
+	path = extra_modules/markdown_strikethrough
+	url = https://github.com/BlTniki/markdown_strikethrough.git
