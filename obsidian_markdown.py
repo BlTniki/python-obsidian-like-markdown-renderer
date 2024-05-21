@@ -17,7 +17,7 @@ default_extensions = [
 ]
 default_extension_configs = {}
 
-def ObsidianMarkdown(**kwargs):
+def ObsidianMarkdown(**kwargs) -> Markdown:
     """
     Creates a new Markdown instance.
     Simply wraps markdown.Markdown providing kwargs directly to the underlying Markdown class.
