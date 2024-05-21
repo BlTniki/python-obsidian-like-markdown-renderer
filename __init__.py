@@ -1,0 +1,1 @@
+from .obsidian_markdown import ObsidianMarkdown

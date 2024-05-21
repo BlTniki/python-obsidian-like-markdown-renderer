@@ -5,9 +5,9 @@ GitHub: https://github.com/BlTniki/python-obsidian-like-markdown-renderer
 """
 from markdown import Markdown
 
-from markdown_mark.markdown_mark import makeExtension as makeMarkdownMarkExtension
-from markdown_obsidian_katex import makeExtension as makeObsidianKatexExtension
-from markdown_strikethrough.markdown_strikethrough import makeExtension as makeStrikethroughExtension
+from .markdown_mark.markdown_mark import makeExtension as makeMarkdownMarkExtension
+from .markdown_obsidian_katex import makeExtension as makeObsidianKatexExtension
+from .markdown_strikethrough.markdown_strikethrough import makeExtension as makeStrikethroughExtension
 
 default_extensions = [
     'fenced_code', 'tables', 'nl2br',
@@ -44,16 +44,3 @@ def ObsidianMarkdown(**kwargs):
     if "extension_configs" not in kwargs:
         kwargs["extension_configs"] = default_extension_configs
     return Markdown(**kwargs)
-
-
-if __name__ == "__main__":
-    md_str = r"""
-# Hi
-i can ~~strikethrough~~
-i can *katex* $\pi$
-$$
-\frac{1}{0}
-$$
-i can ==mark=="""
-    md = ObsidianMarkdown()
-    print(md.convert(md_str))
